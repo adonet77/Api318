@@ -35,6 +35,12 @@
             <version>5.2.2</version>
         </dependency>
         
+        <!-- Biblioteca para generar y verificar hashes BCrypt -->
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>0.4</version>
+        </dependency>     
     </dependencies>
     
     <build>
