@@ -1,7 +1,8 @@
 
 # API318
 
-API REST desarrollada en Java para la gestión de citas.
+API REST desarrollada en Java para la gestion de usuario
+
 
 ## Tecnologías
 
