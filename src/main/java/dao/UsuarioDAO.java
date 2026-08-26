@@ -67,9 +67,20 @@ public class UsuarioDAO {
 
         } catch (SQLException e) {
 
-            // Mostrar el mensaje cuando ocurre un error relacionado con SQL
-            System.out.println("Error al registrar el usuario: " + e.getMessage());
+            // Obtener el código de error generado por MySQL
+            int codigoError = e.getErrorCode();
 
+            // Verificar si el error corresponde a un registro duplicado
+            if (codigoError == 1062) {
+
+                // Mostrar un mensaje específico para usuario duplicado
+                System.out.println("El nombre de usuario ya está registrado.");
+
+            } else {
+
+                // Mostrar otros errores relacionados con SQL
+                System.out.println("Error al registrar el usuario: " + e.getMessage());
+            }
         }
         // Si el INSERT no fue exitoso, devolver false
         return false;
