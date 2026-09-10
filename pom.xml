@@ -29,6 +29,7 @@
             <artifactId>mysql-connector-j</artifactId>
             <version>9.4.0</version>
         </dependency>
+         <!-- Biblioteca para leer variables almacendas en un archivo .env  -->
         <dependency>
             <groupId>io.github.cdimascio</groupId>
             <artifactId>java-dotenv</artifactId>
@@ -40,7 +41,14 @@
             <groupId>org.mindrot</groupId>
             <artifactId>jbcrypt</artifactId>
             <version>0.4</version>
-        </dependency>     
+        </dependency> 
+        
+        <!--Biblioteca GSON para trabajar con JSON-->    
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.13.1</version>
+        </dependency>    
     </dependencies>
     
     <build>

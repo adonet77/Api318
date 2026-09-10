@@ -1,11 +1,12 @@
 
-package dao;
+package util;
 
 /**
  *
  * @author ADONET
  */
 
+import dao.UsuarioDAO;
 import model.Usuario;
 
 public class PruebaUsuario {
@@ -16,16 +17,16 @@ public class PruebaUsuario {
         Usuario usuario = new Usuario();
 
         // Asignar los nombres
-        usuario.setNombres("Adonay");
+        usuario.setNombres("Luz");
 
         // Asignar los apellidos
-        usuario.setApellidos("Sanchez");
+        usuario.setApellidos("Mendez");
 
         // Asignar el nombre de usuario
-        usuario.setUsuario("asanchez");
+        usuario.setUsuario("Lmendez");
 
         // Asignar la contraseña
-        usuario.setPassword("adonet77");
+        usuario.setPassword("2028");
 
         // Crear un objeto UsuarioDAO
         UsuarioDAO usuarioDAO = new UsuarioDAO();

@@ -4,7 +4,7 @@ public class PruebaPassword {
 
     public static void main(String[] args) {
 
-        String password = "adonet";
+        String password = "123456";
 
         String hash = PasswordUtil.generarHash(password);
 

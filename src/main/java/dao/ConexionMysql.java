@@ -16,9 +16,9 @@ public class ConexionMysql {
 
     // Definir constantes
     private static final String USUARIO = dotenv.get("API_USER");
-    private static final String CONTRASENA= dotenv.get("API_PASSWORD");
+    private static final String CONTRASENA = dotenv.get("API_PASSWORD");
     private static final String BD = dotenv.get("API_NAME");
-    private static final String IP= dotenv.get("API_HOST");
+    private static final String IP = dotenv.get("API_HOST");
     private static final String PUERTO = dotenv.get("API_PORT");
 
     //URL para conectara Mysql
@@ -28,19 +28,40 @@ public class ConexionMysql {
 
     // Metodo establecerConexion()
     public Connection establecerConexion() {
+
         try {
-            //Probar variables 
-            // System.out.println("Usuario: " + dotenv.get("API_USER"));
-            // System.out.println("Base de datos: " + dotenv.get("API_NAME"));
-            conexion = DriverManager.getConnection(URL, USUARIO, CONTRASENA);
-            //Mensaje de confirmacion
+
+            // Cargar manualmente el driver JDBC de MySQL
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // Establecer la conexión con MySQL
+            conexion = DriverManager.getConnection(
+                    URL,
+                    USUARIO,
+                    CONTRASENA
+            );
+
+            // Mensaje de confirmación
             System.out.println("Conexion exitosa a MySQL");
 
-        } catch (SQLException e) {
-            System.out.println("ERROR al conectar: " + e.getMessage());
+        } catch (ClassNotFoundException e) {
 
+            // El driver de MySQL no fue encontrado
+            System.out.println(
+                    "ERROR: No se encontró el driver de MySQL: "
+                    + e.getMessage()
+            );
+
+        } catch (SQLException e) {
+
+            // Error relacionado con la conexión
+            System.out.println(
+                    "ERROR al conectar: "
+                    + e.getMessage()
+            );
         }
-        //Retorna el objeto conexion
+
+        // Retornar la conexión
         return conexion;
     }
 
