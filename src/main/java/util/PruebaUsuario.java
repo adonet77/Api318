@@ -17,16 +17,16 @@ public class PruebaUsuario {
         Usuario usuario = new Usuario();
 
         // Asignar los nombres
-        usuario.setNombres("Luz");
+        usuario.setNombres("Lucas");
 
         // Asignar los apellidos
-        usuario.setApellidos("Mendez");
+        usuario.setApellidos("Vega");
 
         // Asignar el nombre de usuario
-        usuario.setUsuario("Lmendez");
+        usuario.setUsuario("Luvega");
 
         // Asignar la contraseña
-        usuario.setPassword("2028");
+        usuario.setPassword("2026");
 
         // Crear un objeto UsuarioDAO
         UsuarioDAO usuarioDAO = new UsuarioDAO();

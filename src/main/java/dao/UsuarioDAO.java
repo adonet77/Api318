@@ -48,7 +48,7 @@ public class UsuarioDAO {
             sentencia.setString(3, usuario.getUsuario());
 
             // Generar el hash de la contraseña antes de almacenarla
-            String hash = PasswordUtil.generarHash(usuario.getPassword());
+          String hash = PasswordUtil.generarHash(usuario.getPassword());
 
             // Colocar el hash generado en el cuarto ?
             sentencia.setString(4, hash);
