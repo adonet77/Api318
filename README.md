@@ -40,6 +40,7 @@ en el código fuente y el archivo `.env` está excluido mediante `.gitignore`.
 
 
 /Api318/UsuarioControlador
+
 Permite consultar todos los usuarios registrados en la base de datos.
 
 La información se devuelve en formato JSON.
