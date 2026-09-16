@@ -38,7 +38,7 @@ en el código fuente y el archivo `.env` está excluido mediante `.gitignore`.
 
 **Endpoint:**
 
-```text
+
 /Api318/UsuarioControlador
 Permite consultar todos los usuarios registrados en la base de datos.
 
@@ -91,4 +91,4 @@ y no como texto plano.
 | **DELETE** | `/Api318/UsuarioControlador?id=21` | Eliminar usuario |
 
 Este README refleja el estado actual del **API318**, sin documentar todavía funcionalidades que aún no hemos terminado, como `PUT` o el registro de usuarios mediante el controlador.
-```
+
